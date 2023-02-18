@@ -1,0 +1,7 @@
+ get roget.txt and do some obvious trimming of non-essential content
+ 
+ cat roget.txt | tr '[:upper:]' '[:lower:]' | tr  '.,;&' '.' | tr '\n\r' ' ' > roget2.txt
+ sed 's/ \# / /g'  roget2.txt > roget3.txt
+ sed 's/\[obs3\]/ /g'  roget3.txt > roget4.txt
+ sed 's/\.c\./\./g'  roget4.txt > roget5.txt
+ 
